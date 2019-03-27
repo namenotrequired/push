@@ -1,3 +1,6 @@
+The known and trusted raix:push with the latest updates on Atmosphere
+
+
 <img alt="Gi-SoftWare" src="https://raw.githubusercontent.com/raix/push/master/docs/logo.png" width="20%" height="20%">
 
 raix:push Push notifications
@@ -25,17 +28,19 @@ We are using [semantic-release](https://github.com/semantic-release/semantic-rel
 
 ## Updates For Android 8.0
 
-Meteor must be version 1.6.1 
+Meteor must be version 1.6.1
 
 Cordova Android must be version 6.3.0
+
 Cordova IOS must be version 4.5.0
 
 Meteor release 1.6.1 https://docs.meteor.com/changelog.html#changes-10
-"The cordova-lib package has been updated to version 7.1.0, cordova-android has been updated to version 6.4.0 (plus one additional commit), and cordova-ios has been updated to version 4.5.4"
+
+> The cordova-lib package has been updated to version 7.1.0, cordova-android has been updated to version 6.4.0 (plus one additional commit), and cordova-ios has been updated to version 4.5.4
 
 To verify the correct installation ADD phonegap-plugin-push@2.1.2 to your cordova plugins file.
 
-After your app builds, Make the following changes to your build.gradle file. The simpliest solution to modify this file is in android studio. 
+After your app builds, Make the following changes to your build.gradle file. The simpliest solution to modify this file is in android studio.
 
 The correct gradle file to modify has this line at the begining of the file:
 
@@ -82,7 +87,7 @@ PushNotification.createChannel(
         console.log('error');
     },
     {
-       id: Meteor.userId(), //Use any Id you prefer, but the same Id for this channel must be sent from the server, 
+       id: Meteor.userId(), //Use any Id you prefer, but the same Id for this channel must be sent from the server,
        description: 'Android Channel', //And any description your prefer
        importance: 3,
        vibration: true
@@ -101,12 +106,12 @@ Push.send({
           android_channel_id:this.userId,		//The android channel should match the id on the client
           query: {
               userId: this.userId
-          }, 
+          },
           gcm: {
             style: 'inbox',
             summaryText: 'There are %n% notifications'
-          },          
-});  
+          },
+});
 ```
 
 ## Install
@@ -306,7 +311,7 @@ For more internal or advanced features read [ADVANCED.md](docs/ADVANCED.md)
 
 ## For maintainers
 
-We have a slack channel to keep communication tight between contributors - it's on https://meteoropensourcecomm.slack.com in channel `#raixpush` 
+We have a slack channel to keep communication tight between contributors - it's on https://meteoropensourcecomm.slack.com in channel `#raixpush`
 
 Kind regards
 
