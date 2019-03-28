@@ -1,6 +1,6 @@
 Package.describe({
   name: 'bartoftutormundi:push',
-  version: '3.0.2',
+  version: '3.0.3',
   summary: 'Isomorphic Push notifications for APN and GCM',
   git: 'https://github.com/namenotrequired/push.git'
 });
@@ -12,7 +12,7 @@ Npm.depends({
 });
 
 Cordova.depends({
-  'phonegap-plugin-push': '2.1.2', // previously 1.8.4
+  'phonegap-plugin-push': '1.9.0', // previously 1.8.4
   'cordova-plugin-device': '1.1.3', // previously 1.1.1
 });
 
